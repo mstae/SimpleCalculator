@@ -22,4 +22,5 @@ jobs:
     - name: Build
       run: dotnet build DemoCalculatorApp --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      # run: dotnet test AppUnitTests --no-build --verbosity normal
+      run: dotnet test AppUnitTests
