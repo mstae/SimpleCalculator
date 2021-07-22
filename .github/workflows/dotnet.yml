@@ -30,7 +30,7 @@ jobs:
     #   run: dotnet build DemoCalculatorApp --configuration Release --no-restore
     - name: Test
       # run: dotnet test AppUnitTests --configuration Release --verbosity normal
-      run: dotnet test AppUnitTests --logger trx --results-directory "TestResults-${{ matrix.dotnet-version }}"
+      run: dotnet test 
     - name: Upload dotnet test results
       uses: actions/upload-artifact@v2
       with:
