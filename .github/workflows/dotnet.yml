@@ -7,8 +7,8 @@ on:
     branches: [ main ]
 
 env:
-  APPLITOOLS_API_KEY: ${{ P0RW101riTS69TZtxmb6lNHyfCQbcQPh3FY9CivGiLo2Q110 }}
-  APPLITOOLS_BATCH_ID: ${{ github.sha }}
+  # APPLITOOLS_API_KEY: P0RW101riTS69TZtxmb6lNHyfCQbcQPh3FY9CivGiLo2Q110
+  # APPLITOOLS_BATCH_ID: ${{ github.sha }}
 
 jobs:
   build:
