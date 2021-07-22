@@ -23,4 +23,11 @@ jobs:
       run: dotnet build DemoCalculatorApp --configuration Release --no-restore
     - name: Test
       # run: dotnet test AppUnitTests --configuration Release --verbosity normal
-      run: dotnet test AppUnitTests --configuration Release --verbosity normal
+      run: dotnet test --logger trx --results-directory "TestResults-${{ matrix.dotnet-version }}"
+    - name: Upload dotnet test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: dotnet-results-${{ matrix.dotnet-version }}
+        path: TestResults-${{ matrix.dotnet-version }}
+      # Use always() to always run this step to publish test results when there are test failures
+      if: ${{ always() }}
