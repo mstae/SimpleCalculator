@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 
-env:
+# env:
   # APPLITOOLS_API_KEY: P0RW101riTS69TZtxmb6lNHyfCQbcQPh3FY9CivGiLo2Q110
   # APPLITOOLS_BATCH_ID: ${{ github.sha }}
 
