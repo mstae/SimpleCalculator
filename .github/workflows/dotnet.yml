@@ -15,23 +15,10 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+    - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
-    # - name: Restore dependencies
-    #   run: dotnet restore
-    # - name: Build
-    #   run: dotnet build DemoCalculatorApp --configuration Release --no-restore
-    - name: Test
-      # run: dotnet test AppUnitTests --configuration Release --verbosity normal
-      run: dotnet test AppUnitTests
-    # - name: Upload dotnet test results
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: dotnet-results-${{ matrix.dotnet-version }}
-    #     path: TestResults-${{ matrix.dotnet-version }}
-    #   # Use always() to always run this step to publish test results when there are test failures
-    #   if: ${{ always() }}
+        dotnet-version: '5.0.x' 
+    - run: dotnet build DemoCalculatorApp
+    - run: dotnet build AppUnitTests
+    
