@@ -25,4 +25,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Test
-      run: dotnet test AppUnitTests --no-restore --verbosity detailed --help
+      run: dotnet test --no-restore --verbosity detailed --help
