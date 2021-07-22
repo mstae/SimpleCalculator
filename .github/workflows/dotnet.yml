@@ -22,8 +22,8 @@ jobs:
     - name: build dotnet application and test
       run: dotnet build 
     
-    # - name: build dotnet unit test application
-    #   run: dotnet build UnitTests
+    - name: build dotnet unit test application
+      run: dotnet build UnitTests
 
     - name: Run tests
       run: dotnet test UnitTests
