@@ -20,11 +20,5 @@ jobs:
       with:
         dotnet-version: '5.0.x' 
     - run: dotnet build DemoCalculatorApp
-  test: 
-    runs-on: ubuntu-latest
-    steps: 
-    - uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '4.7.x' 
     - run: dotnet build AppUnitTests
     
