@@ -19,7 +19,8 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '5.0.x' 
-    - name: build calculator logic project
-    - run: dotnet build 
+    - name: build dotnet app
+    - run: dotnet build DemoCalculatorApp
+    - run: dotnet build UnitTests
     - run: dotnet test UnitTests
     
