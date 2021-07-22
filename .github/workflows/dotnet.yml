@@ -21,5 +21,5 @@ jobs:
         dotnet-version: '5.0.x' 
     - run: dotnet build DemoCalculatorApp
     - run: dotnet build UnitTests
-    - run: dotnet test
+    - run: dotnet test UnitTests
     
