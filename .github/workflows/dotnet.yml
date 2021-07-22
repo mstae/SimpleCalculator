@@ -21,11 +21,5 @@ jobs:
         dotnet-version: '5.0.x' 
     - name: build calculator logic project
     - run: dotnet build 
-    # - run: dotnet build 
     - run: dotnet test UnitTests
-    # - name: build testing project
-    # - run: dotnet build UnitTests
-
-    # - name: running unit tests
-    # - run: dotnet test UnitTests
     
