@@ -23,7 +23,7 @@ namespace AppUnitTests
         public void TestSubtraction()
         {
             CalculatorLogic c1 = new CalculatorLogic();
-            double expectedResult = 8;
+            double expectedResult = 2;
             double actualResult = c1.SimpleSubtraction(9, 1);
             Assert.AreEqual(expectedResult, actualResult);
         }
