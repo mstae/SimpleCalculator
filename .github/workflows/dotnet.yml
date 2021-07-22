@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  APPLITOOLS_API_KEY: ${{ P0RW101riTS69TZtxmb6lNHyfCQbcQPh3FY9CivGiLo2Q110 }}
+  APPLITOOLS_BATCH_ID: ${{ github.sha }}
+
 jobs:
   build:
 
@@ -20,10 +24,10 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build DemoCalculatorApp --configuration Release --no-restore
+    # - name: Restore dependencies
+    #   run: dotnet restore
+    # - name: Build
+    #   run: dotnet build DemoCalculatorApp --configuration Release --no-restore
     - name: Test
       # run: dotnet test AppUnitTests --configuration Release --verbosity normal
       run: dotnet test AppUnitTests --logger trx --results-directory "TestResults-${{ matrix.dotnet-version }}"
