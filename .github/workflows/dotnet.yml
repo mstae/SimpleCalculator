@@ -19,8 +19,12 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '5.0.x' 
-    - name: build dotnet app
+    - name: build dotnet application and test
     - run: dotnet build DemoCalculatorApp
+    
+    - name: build dotnet unit test application
     - run: dotnet build UnitTests
+
+    - name: Run tests
     - run: dotnet test UnitTests
     
